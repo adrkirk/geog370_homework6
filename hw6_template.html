@@ -8,7 +8,8 @@
 <body>
 <h1>Homework 6: Census data choropleth </h1>
 <h2>Adriana Kirk</h2>
-<h3>The chloropleth below shows the aggregate number of minutes New Yorkers spent commuting in 2021 by county. The datset used from the United States Census Bureau only provided data for 34 of New York's 62 counties, explaining the large, empty regions of the map.</h3>
+<h2>Part 1: Chloropleth Using Census Data</h2>
+<h3>The chloropleth below shows the aggregate number of minutes New Yorkers spent commuting to work in 2021 by county. The datset used from the United States Census Bureau only provided data for 34 of New York's 62 counties, explaining the large, empty regions of the map.</h3>
 <!-- Your map goes here -->
 <a href="Commute Time By County.png">
     <img src="Commute Time By County.png" alt="Commute Time By County" width='500px'>
@@ -20,5 +21,29 @@
     <p></p>
     <a href="Counties.geojson"> Link to shapefile </a>
 
+    <h2>Part 2: Ratios and Categories Census Data</h2>
+    <h3>I used the ratio of aggregate number of minutes counties' populations spent commuting to work over each counties' total population in 2020. This normalization accounts for geographic areas of high population density, allowing us a better understanding of commute time patterns across the state. Each mode of data categorization
+        provides a different view of the data, some clearly more helpful than others. For example, the first mode pictured, Equal Interval, provides the most useful view of the data. The equal intervals, each 1.6 units apart, begin at 7 and end at the value 15, and color categories are represented on the map. Also informative, but slightly less
+        so, is the Natural Breaks mode. In this map, the data is grouped logically based on values that fall close together. A con of this mode when applied to this particular dataset is that the first color category goes entirely unrepresented because it corresponds to the 0-0 range.
+        In the case of this dataset, the least helpful mode was Equal Count (Quantile). Only the last three color categories were represented on the map because the first two corresponded with ranges in which no values fell within: 0-0 and 0-2.8
+    </h3>
+    <!-- Your map goes here -->
+    <a href="Equal Interval.png">
+        <img src="Equal Interval.png" alt="Equal Interval" width='500px'>
+        </a>
+    <!-- Your map goes here -->
+    <a href="Equal Count (Quantile).png">
+        <img src="Equal Count (Quantile).png" alt="Equal Count (Quantile)" width='500px'>
+        </a>
+        <!-- Your map goes here -->
+    <a href="Natural Breaks.png">
+        <img src="Natural Breaks.png" alt="Natural Breaks" width='500px'>
+        </a>
+    
+    <!-- Link to your shapefile in Github and you CSV -->
+    <h2>Data used for this project</h2>
+        <a href="ACSDT1Y2021.B08013-2022-09-28T000137.csv"> CSV dataset </a>
+        <p></p>
+        <a href="Counties.geojson"> Link to shapefile </a>
 </body>
 </html>
